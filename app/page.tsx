@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { BottomNav } from '@/components/BottomNav';
 
 export default function Home() {
   const [pwaInstallable, setPwaInstallable] = useState(false);
@@ -204,39 +205,7 @@ export default function Home() {
           </Link>
         </div>
 
-      {/* Bottom nav */}
-      <nav className="w-full max-w-2xl mx-auto border-t border-white/5 px-4 py-3 flex justify-around">
-        <Link href="/" className="flex flex-col items-center gap-0.5 text-red-500">
-          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-          </svg>
-          <span className="text-[10px] font-medium">Accueil</span>
-        </Link>
-        <Link href="/download" className="flex flex-col items-center gap-0.5 text-gray-500 hover:text-white transition-colors">
-          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 3v13m0 0l-4-4m4 4l4-4" />
-          </svg>
-          <span className="text-[10px] font-medium">Télécharger</span>
-        </Link>
-        <Link href="/shorts" className="flex flex-col items-center gap-0.5 text-gray-500 hover:text-white transition-colors">
-          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M8 5v14l11-7z"/>
-          </svg>
-          <span className="text-[10px] font-medium">Shorts</span>
-        </Link>
-        <Link href="/upload" className="flex flex-col items-center gap-0.5 text-gray-500 hover:text-white transition-colors">
-          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 3v9m0-9l-4 4m4-4l4 4" />
-          </svg>
-          <span className="text-[10px] font-medium">Publier</span>
-        </Link>
-        <Link href="/search" className="flex flex-col items-center gap-0.5 text-gray-500 hover:text-white transition-colors">
-          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z" />
-          </svg>
-          <span className="text-[10px] font-medium">Recherche</span>
-        </Link>
-      </nav>
+      <BottomNav />
 
       {/* Ad slot – footer */}
       <div className="w-full bg-[#111118] border-t border-white/5 flex items-center justify-center py-2 px-4" aria-label="Advertisement">
