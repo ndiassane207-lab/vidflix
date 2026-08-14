@@ -172,6 +172,38 @@ export default function Home() {
         </p>
       </main>
 
+      {/* New features row */}
+        <div className="grid grid-cols-2 gap-3">
+          <Link
+            href="/shorts"
+            className="flex items-center gap-3 p-4 bg-[#1a1a24] hover:bg-[#1f1f2e] active:scale-95 border border-white/5 rounded-2xl transition-all group"
+          >
+            <span className="w-10 h-10 flex items-center justify-center rounded-xl bg-red-600/15">
+              <svg className="w-6 h-6 text-red-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </span>
+            <div>
+              <div className="font-semibold text-sm text-white group-hover:text-red-400 transition-colors">Shorts</div>
+              <div className="text-xs text-gray-500">Regarder des vidéos</div>
+            </div>
+          </Link>
+          <Link
+            href="/upload"
+            className="flex items-center gap-3 p-4 bg-[#1a1a24] hover:bg-[#1f1f2e] active:scale-95 border border-white/5 rounded-2xl transition-all group"
+          >
+            <span className="w-10 h-10 flex items-center justify-center rounded-xl bg-purple-600/15">
+              <svg className="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 3v9m0-9l-4 4m4-4l4 4" />
+              </svg>
+            </span>
+            <div>
+              <div className="font-semibold text-sm text-white group-hover:text-purple-400 transition-colors">Publier</div>
+              <div className="text-xs text-gray-500">Partager une vidéo</div>
+            </div>
+          </Link>
+        </div>
+
       {/* Bottom nav */}
       <nav className="w-full max-w-2xl mx-auto border-t border-white/5 px-4 py-3 flex justify-around">
         <Link href="/" className="flex flex-col items-center gap-0.5 text-red-500">
@@ -185,6 +217,18 @@ export default function Home() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 3v13m0 0l-4-4m4 4l4-4" />
           </svg>
           <span className="text-[10px] font-medium">Télécharger</span>
+        </Link>
+        <Link href="/shorts" className="flex flex-col items-center gap-0.5 text-gray-500 hover:text-white transition-colors">
+          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+          <span className="text-[10px] font-medium">Shorts</span>
+        </Link>
+        <Link href="/upload" className="flex flex-col items-center gap-0.5 text-gray-500 hover:text-white transition-colors">
+          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 3v9m0-9l-4 4m4-4l4 4" />
+          </svg>
+          <span className="text-[10px] font-medium">Publier</span>
         </Link>
         <Link href="/search" className="flex flex-col items-center gap-0.5 text-gray-500 hover:text-white transition-colors">
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
